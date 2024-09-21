@@ -1,18 +1,12 @@
-type User1 = {
+type User = {
   name: string;
   surname: string;
   email: string;
   password: string;
 };
 
-function createOrUpdateUser(initialValues: Partials<User2>): User2 {
-  const defaultUser: User1 = {
-    name: "",
-    surname: "",
-    email: "",
-    password: "",
-  };
-  return { ...defaultUser, ...initialValues };
+function createOrUpdateUser(initialValues: Partial<User>) {
+  console.log("Updating user with values:", initialValues);
 }
 
 createOrUpdateUser({

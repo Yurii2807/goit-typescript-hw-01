@@ -1,14 +1,14 @@
-type UserAddress = {
+interface Address {
   city: string;
   country: string;
-};
+}
 
-type User = {
+interface User {
   name: string;
   age: number;
   email: string;
-  address?: UserAddress;
-};
+  address?: Address;
+}
 
 const mango: User = {
   name: "Mango",
